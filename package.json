@@ -1,0 +1,28 @@
+{
+  "name": "react-dom-attrs",
+  "version": "0.1.0",
+  "description": "A filter pick react known dom attrs from props",
+  "main": "lib",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "node test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cncolder/react-dom-attrs.git"
+  },
+  "keywords": [
+    "react",
+    "react dom",
+    "react toolbox",
+    "react unknown prop warning"
+  ],
+  "author": "Colder",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/cncolder/react-dom-attrs/issues"
+  },
+  "homepage": "https://github.com/cncolder/react-dom-attrs#readme"
+}
