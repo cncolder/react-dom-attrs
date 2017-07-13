@@ -17,7 +17,29 @@ yarn add react-dom-attrs
 
 ## Example
 
+### API
+
 ```js
+/**
+ * @param {{}} props - React component props
+ * @return {{}} - DOM safe attrs
+ */
+domAttrs(props: {}): {}
+```
+
+```js
+const domAttrs = require('react-dom-attrs')
+
+domAttrs({ width: 10, height: 10 }) // { width: 10, height: 10 }
+
+domAttrs({ onClick: () => { } }) // { onClick: [Function: onClick] }
+
+domAttrs({ bad: 10 }) // { }
+```
+
+### Full react example
+
+```jsx
 const domAttrs = require('react-dom-attrs')
 
 const Card = props => {
@@ -49,6 +71,21 @@ const App = () => (
 )
 ```
 
+## Limits
+
+This module only pick DOM safe attrs and donot care what element you will pass to.
+
+e.g.
+
+```jsx
+var Div = <div {...domAttrs({ href='//:0'})} />
+```
+
+You will got
+
+```html
+<div href='//:0' />
+```
 ## Acknowledgements
 
 The attr list used by this project come from [styled-components](https://github.com/styled-components/styled-components). We'd like to thank styled components team ideas, code or inspiration.
